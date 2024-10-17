@@ -23,10 +23,10 @@ const Hero = () => {
         Engenheiro DevOps
       </p>
       <div className='flex gap-6 mt-6 z-10'>
-        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg'>
+        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'>
           Contate-me
         </button>
-        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg'>
+        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'>
           Ver Currículo
         </button>
       </div>
