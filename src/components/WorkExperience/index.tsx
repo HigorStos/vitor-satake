@@ -23,7 +23,6 @@ const WorkExperience = () => {
           className='vertical-timeline-element--work'
           contentStyle={{ background: '#1F2937', color: '#fff' }}
           contentArrowStyle={{ borderRight: '10px solid  #F97316' }}
-          date='2011 - present'
           iconStyle={{ background: '#1F2937', color: '#fff' }}
           icon={
             <img
