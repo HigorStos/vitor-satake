@@ -1,7 +1,11 @@
 import vitorImage from '../../assets/vitor-satake.jpg';
 import devOpsHeroImage from '../../assets/devops-hero.jpg';
+import { useLanguage } from '../../contexts/LanguageContext';
+import translations from '../../translations';
 
 const Hero = () => {
+  const { language, changeLanguage } = useLanguage();
+
   return (
     <section
       id='home'
@@ -21,14 +25,24 @@ const Hero = () => {
       />
       <h1 className='text-white font-bold text-4xl mt-8 z-10'>Vitor Satake</h1>
       <p className='text-white font-bold text-sm mt-2 uppercase z-10'>
-        Engenheiro DevOps
+        {translations[language]?.hero?.role || 'Carregando...'}
       </p>
       <div className='flex gap-6 mt-6 z-10'>
-        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'>
-          Contate-me
+        <button
+          onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
+          className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'
+        >
+          {language === 'pt'
+            ? translations.pt.hero.contactButton
+            : translations.en.hero.contactButton}
         </button>
-        <button className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'>
-          Ver Currículo
+        <button
+          onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
+          className='w-36 bg-gray-800 text-orange-500 font-medium text-md py-2 px-4 rounded-md shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:bg-orange-500 hover:text-white'
+        >
+          {language === 'pt'
+            ? translations.pt.hero.resumeButton
+            : translations.en.hero.resumeButton}
         </button>
       </div>
     </section>

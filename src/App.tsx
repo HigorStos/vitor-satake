@@ -9,10 +9,11 @@ import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Container>
         <Header />
         <Hero />
@@ -25,7 +26,7 @@ function App() {
         <Contact />
         <Footer />
       </Container>
-    </>
+    </LanguageProvider>
   );
 }
 

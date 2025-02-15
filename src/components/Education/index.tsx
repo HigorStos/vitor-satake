@@ -1,26 +1,30 @@
+import { useLanguage } from '../../contexts/LanguageContext';
+import translations from '../../translations';
+
 const Education = () => {
+  const { language } = useLanguage();
+
   const educationData = [
     {
-      year: '2022 - 2024',
-      title: 'Graduação',
-      degree: 'Tecnólogo em Análise e Desenvolvimento de Sistemas',
-      institute: 'Fatec Rubens Lara',
+      year: translations[language].education.education1.year,
+      title: translations[language].education.education1.title,
+      degree: translations[language].education.education1.degree,
+      institute: translations[language].education.education1.institute,
       details: [
-        'Affiliated with Kurukshetra University, Kurukshetra',
-        'Completed B.Tech in Computer Science Engineering with 79%.',
-        'Maintained approx. 70% in every semester of college academic.',
+        translations[language].education.education1.details[0],
+        translations[language].education.education1.details[1],
+        translations[language].education.education1.details[2],
       ],
     },
     {
-      year: '2015 - 2018',
-      title: 'Diploma',
-      degree: 'Diploma',
-      institute: 'Instituição',
+      year: translations[language].education.education2.year,
+      title: translations[language].education.education2.title,
+      degree: translations[language].education.education2.degree,
+      institute: translations[language].education.education2.institute,
       details: [
-        'Affiliated with Haryana Technical Education Board (HTEB), Haryana',
-        'The college was mainly focused on the basics of 10+2 and the engineering subjects',
-        'There was also a good base in Mathematics and Data Structures.',
-        'Completed my Diploma with 70%.',
+        translations[language].education.education2.details[0],
+        translations[language].education.education2.details[1],
+        translations[language].education.education2.details[2],
       ],
     },
   ];

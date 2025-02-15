@@ -1,14 +1,20 @@
 import emailLogo from '../../assets/email.png';
 import linkedinLogo from '../../assets/linkedin.png';
 import githubLogo from '../../assets/github.png';
+import { useLanguage } from '../../contexts/LanguageContext';
+import translations from '../../translations';
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   return (
     <section
       id='contact'
       className='w-full max-w-6xl flex flex-col justify-center items-center'
     >
-      <h1 className='font-bold text-2xl text-center mb-8'>Contato</h1>
+      <h1 className='font-bold text-2xl text-center mb-8'>
+        {translations[language].contact.title}
+      </h1>
       <div className='w-full flex items-center justify-center gap-6'>
         <a className='w-16 h-16' href='mailto:vitor.lemos@modalgr.io'>
           <img src={emailLogo} alt='Ícone E-mail' />

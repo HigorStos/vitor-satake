@@ -1,4 +1,6 @@
 import { SkillBar } from 'react-skillbars';
+import { useLanguage } from '../../contexts/LanguageContext';
+import translations from '../../translations';
 
 const skills = [
   { type: 'Terraform', level: 90 },
@@ -21,12 +23,16 @@ const colors = {
 };
 
 const Skills = () => {
+  const { language } = useLanguage();
+
   return (
     <section
       id='skills'
       className='w-full mt-14 flex flex-col justify-center items-center'
     >
-      <h1 className='font-bold text-2xl'>Habilidades</h1>
+      <h1 className='font-bold text-2xl'>
+        {translations[language].skills.title}
+      </h1>
       <div style={{ width: '90%', margin: 'auto', padding: '20px' }}>
         <SkillBar
           skills={skills}
