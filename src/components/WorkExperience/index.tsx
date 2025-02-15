@@ -7,7 +7,10 @@ import modalGrImage from '../../assets/modalgr.png';
 
 const WorkExperience = () => {
   return (
-    <section className='w-full mt-20 flex flex-col justify-center items-center'>
+    <section
+      id='works'
+      className='w-full mt-20 flex flex-col justify-center items-center'
+    >
       <h1 className='font-bold text-2xl'>Experiência de Trabalho</h1>
       <VerticalTimeline>
         <VerticalTimelineElement
@@ -17,7 +20,11 @@ const WorkExperience = () => {
           date='2011 - present'
           iconStyle={{ background: '#1F2937', color: '#fff' }}
           icon={
-            <img className='w-9 mt-4 ms-3' src={modalGrImage} alt='ModalGR' />
+            <img
+              className='w-7 sm:w-9 mt-2 sm:mt-4 ms-1 sm:ms-3'
+              src={modalGrImage}
+              alt='ModalGR'
+            />
           }
         >
           <h3 className='font-bold text-1xl text-orange-500'>

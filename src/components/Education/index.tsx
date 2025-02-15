@@ -26,18 +26,21 @@ const Education = () => {
   ];
 
   return (
-    <div className='max-w-4xl mx-auto my-10 mt-14'>
+    <section
+      id='education'
+      className='max-w-4xl p-4 sm:p-0 mx-auto my-10 mt-14'
+    >
       <h1 className='font-bold text-2xl text-center mb-8'>Educação</h1>
       {educationData.map((edu, index) => (
         <div
           key={index}
-          className='flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden mb-6'
+          className='flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden mb-6'
         >
-          <div className='bg-blue-900 text-white p-6 md:w-1/4 flex flex-col justify-center items-center'>
+          <div className='bg-blue-900 text-white p-6 sm:w-1/4 flex flex-col justify-center items-center'>
             <h3 className='text-lg font-semibold text-center'>{edu.title}</h3>
             <span className='text-sm'>{edu.year}</span>
           </div>
-          <div className='p-6 md:w-3/4'>
+          <div className='p-6 sm:w-3/4'>
             <h3 className='text-lg font-semibold'>{edu.degree}</h3>
             <h4 className='font-bold text-gray-700'>{edu.institute}</h4>
             <ul className='list-disc list-inside mt-2 text-gray-600'>
@@ -48,7 +51,7 @@ const Education = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

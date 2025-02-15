@@ -22,7 +22,10 @@ const colors = {
 
 const Skills = () => {
   return (
-    <section className='w-full mt-14 flex flex-col justify-center items-center'>
+    <section
+      id='skills'
+      className='w-full mt-14 flex flex-col justify-center items-center'
+    >
       <h1 className='font-bold text-2xl'>Habilidades</h1>
       <div style={{ width: '90%', margin: 'auto', padding: '20px' }}>
         <SkillBar

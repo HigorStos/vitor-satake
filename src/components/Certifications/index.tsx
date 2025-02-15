@@ -39,7 +39,10 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section className='w-full mt-14 flex flex-col justify-center items-center'>
+    <section
+      id='certifications'
+      className='w-full mt-14 p-4 sm:p-0 flex flex-col justify-center items-center'
+    >
       <h1 className='font-bold text-2xl mb-8'>Certificações</h1>
       <VerticalTimeline>
         {certifications.map((cert, index) => (
