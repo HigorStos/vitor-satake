@@ -11,8 +11,8 @@ const Header = () => {
   const { language, changeLanguage } = useLanguage();
 
   return (
-    <header className='w-full bg-gray-800 relative'>
-      <div className='max-w-7xl px-6 sm:px-12 py-4 flex justify-between items-center mx-auto sm:mx-0 font-medium text-white'>
+    <header className='w-screen flex justify-center bg-gray-800 relative'>
+      <div className='w-full max-w-7xl px-6 sm:px-12 py-4 flex justify-between items-center mx-auto sm:mx-0 font-medium text-white'>
         <h1 className='text-orange-500 text-lg sm:text-xl'>
           {language === 'pt' ? translations.pt.title : translations.en.title}
         </h1>

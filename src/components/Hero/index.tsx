@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='w-full max-w-7xl flex flex-col items-center p-20 relative'
+      className='w-screen flex flex-col items-center p-20 relative'
       style={{
         backgroundImage: `url(${devOpsHeroImage})`,
         backgroundSize: 'cover',
